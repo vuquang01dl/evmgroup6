@@ -1,0 +1,16 @@
+digraph {
+	So_luong_nhan_su
+	Thoi_gian_phat_trien
+	Phan_mem_phuc_tap
+	On_dinh_yeu_cau
+	Kinh_nghiem_nhan_su
+	Chi_phi
+	So_luong_nhan_su -> Thoi_gian_phat_trien
+	Phan_mem_phuc_tap -> Thoi_gian_phat_trien
+	Phan_mem_phuc_tap -> Chi_phi
+	On_dinh_yeu_cau -> Thoi_gian_phat_trien
+	On_dinh_yeu_cau -> Chi_phi
+	Kinh_nghiem_nhan_su -> Thoi_gian_phat_trien
+	Kinh_nghiem_nhan_su -> Chi_phi
+	Thoi_gian_phat_trien -> Chi_phi
+}

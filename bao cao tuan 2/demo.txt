@@ -1,0 +1,72 @@
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [planned_value, actual_cost, percent_complete]
+Sampling 4 chains, 0 divergences: 100%|██████████| 8000/8000 [00:02<00:00, 2873.35draws/s]
+The acceptance probability does not match the target. It is 0.8836289202910986, but should be close to 0.8. Try to increase the number of tuning steps.
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [planned_value, actual_cost, percent_complete]
+Sampling 4 chains, 0 divergences: 100%|██████████| 8000/8000 [00:02<00:00, 3081.13draws/s]
+The acceptance probability does not match the target. It is 0.8895672661918592, but should be close to 0.8. Try to increase the number of tuning steps.
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [planned_value, actual_cost, percent_complete]
+Sampling 4 chains, 0 divergences: 100%|██████████| 8000/8000 [00:02<00:00, 2928.51draws/s]
+The acceptance probability does not match the target. It is 0.8808324931809608, but should be close to 0.8. Try to increase the number of tuning steps.
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [planned_value, actual_cost, percent_complete]
+Sampling 4 chains, 0 divergences: 100%|██████████| 8000/8000 [00:02<00:00, 3155.99draws/s]
+The acceptance probability does not match the target. It is 0.8791501315301784, but should be close to 0.8. Try to increase the number of tuning steps.
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [planned_value, actual_cost, percent_complete]
+Sampling 4 chains, 0 divergences: 100%|██████████| 8000/8000 [00:02<00:00, 3061.86draws/s]
+The acceptance probability does not match the target. It is 0.8803928502282869, but should be close to 0.8. Try to increase the number of tuning steps.
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [planned_value, actual_cost, percent_complete]
+Sampling 4 chains, 0 divergences: 100%|██████████| 8000/8000 [00:02<00:00, 3024.43draws/s]
+The acceptance probability does not match the target. It is 0.8854499359786561, but should be close to 0.8. Try to increase the number of tuning steps.
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [planned_value, actual_cost, percent_complete]
+Sampling 4 chains, 0 divergences: 100%|██████████| 8000/8000 [00:02<00:00, 3059.23draws/s]
+The acceptance probability does not match the target. It is 0.8860731810441034, but should be close to 0.8. Try to increase the number of tuning steps.
+
+Mô tả Hậu nghiệm:
+                 mean     sd  hdi_3%  hdi_97%  ...  ess_bulk  ess_tail  r_hat
+percent_complete  0.50  0.200   0.106    0.896  ...    1260.0    2094.0    1.0
+actual_cost       0.50  0.200   0.112    0.890  ...    1322.0    1760.0    1.0
+planned_value     0.50  0.200   0.105    0.893  ...    1337.0    1907.0    1.0
+CPI               0.50  0.002   0.495    0.504  ...    4386.0    4766.0    1.0
+SPI               0.50  0.007   0.485    0.515  ...    4260.0    3899.0    1.0
+CV                0.50  0.007   0.487    0.513  ...    4376.0    4758.0    1.0
+SV                0.50  0.002   0.495    0.504  ...    4129.0    4422.0    1.0
+
+Hữu ích (trong tất cả các mẫu):
+  97%   50000.0  60000.0  1.0  1.0
+  100%  50000.0  60000.0  1.0  1.0
+
+Mô tả Hậu nghiệm:
+                 mean     sd  hdi_3%  hdi_97%  ...  ess_bulk  ess_tail  r_hat
+percent_complete  0.50  0.200   0.105    0.894  ...    1390.0    2095.0    1.0
+actual_cost       0.50  0.200   0.105    0.891  ...    1336.0    1862.0    1.0
+planned_value     0.50  0.200   0.110    0.890  ...    1282.0    1801.0    1.0
+CPI               0.50  0.002   0.495    0.504  ...    4304.0    5004.0    1.0
+SPI               0.50  0.007   0.482    0.516  ...    4256.0    4566.0    1.0
+CV                0.50  0.007   0.488    0.512  ...    4289.0    4767.0    1.0
+SV                0.50  0.002   0.495    0.504  ...    4385.0    4435.0    1.0
+
+Hữu ích (trong tất cả các mẫu):
+  97%   50000.0  60000.0  1.0  1.0
+  100%  50000.0  60000.0  1.0  1.0
+
+[16 rows x 11 columns]

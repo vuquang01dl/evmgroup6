@@ -1,0 +1,42 @@
+from pgmpy.models import BayesianNetwork
+from pgmpy.factors.discrete import TabularCPD
+
+# Tạo mô hình mạng Bayesian
+model = BayesianNetwork()
+
+# Tạo các biến ngẫu nhiên
+num_personnel = 'Số lượng nhân sự'
+development_time = 'Thời gian phát triển'
+complexity = 'Phần mềm phức tạp'
+requirements_stability = 'Độ ổn định của yêu cầu'
+experience = 'Kinh nghiệm của nhân sự'
+cost = 'Chi phí'
+
+# Thêm các nút vào mô hình
+model.add_nodes_from([num_personnel, development_time, complexity, requirements_stability, experience, cost])
+
+# Xác định các phân phối xác suất cho từng biến
+cpd_num_personnel = TabularCPD(variable=num_personnel, variable_card=3, values=[[0.3], [0.5], [0.2]])
+cpd_development_time = TabularCPD(variable=development_time, variable_card=3, values=[[0.4], [0.3], [0.3]])
+cpd_complexity = TabularCPD(variable=complexity, variable_card=3, values=[[0.2], [0.5], [0.3]])
+cpd_requirements_stability = TabularCPD(variable=requirements_stability, variable_card=3, values=[[0.6], [0.2], [0.2]])
+cpd_experience = TabularCPD(variable=experience, variable_card=3, values=[[0.1], [0.6], [0.3]])
+
+# Xác định mối quan hệ giữa các biến
+model.add_edge(num_personnel, development_time)
+model.add_edge(num_personnel, cost)
+model.add_edge(complexity, development_time)
+model.add_edge(requirements_stability, development_time)
+model.add_edge(experience, cost)
+
+# Gán các phân phối xác suất cho mỗi nút
+model.add_cpds(cpd_num_personnel, cpd_development_time, cpd_complexity, cpd_requirements_stability, cpd_experience)
+
+# Kiểm tra tính hợp lệ của mô hình
+print("Is model valid?", model.check_model())
+
+# Tính xác suất
+from pgmpy.inference import VariableElimination
+infer = VariableElimination(model)
+prob_cost_given_num_personnel = infer.query(variables=[cost], evidence={num_personnel: 1})
+print(prob_cost_given_num_personnel)
